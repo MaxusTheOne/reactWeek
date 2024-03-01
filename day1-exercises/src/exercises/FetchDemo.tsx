@@ -14,7 +14,7 @@ function fetchUser(userId: number, options?: object): Promise<User> {
 
 
 export default function FetchDemo1({ title }: BaseProps) {
-  const [userId, setUserId] = useState(1);
+  const [userId] = useState(1);
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
 
