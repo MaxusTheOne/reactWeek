@@ -4,6 +4,13 @@ import { useState } from "react";
 import "./App.css";
 import PropsDemo from "./exercises/PropsDemo";
 import ListDemo from "./exercises/ListDemo";
+import EventDemo from "./exercises/EventDemo";
+import FormUncontrolled from "./exercises/FormUncontrolled";
+import StateDemo1 from "./exercises/StateDemo1";
+import StateDemo2 from "./exercises/StateDemo2";
+import StateDemo3 from "./exercises/StateDemo3";
+import UseEffectDemo from "./exercises/UseEffect";
+import FetchDemo1 from "./exercises/FetchDemo";
 
 
 export default function App() {
@@ -28,7 +35,14 @@ export default function App() {
           <div className="exercise-style">
             {selectedView === "info" ? <p>All exercises for React day-1</p> : null}
             {selectedView === "props1" ? <PropsDemo title="Props1" /> : null}
-            {selectedView === "props2" ? <ListDemo title="Props2" /> : null}
+            {selectedView === "props2" ? <ListDemo title="List Demo" /> : null}
+            {selectedView === "props3" ? <EventDemo title="Event Demo" /> : null}
+            {selectedView === "props4" ? <FormUncontrolled title="Form Uncontrolled" /> : null}
+            {selectedView === "state1" ? <StateDemo1 title="State Demo a" /> : null}
+            {selectedView === "state2" ? <StateDemo2 title="State Demo b" /> : null}
+            {selectedView === "state3" ? <StateDemo3 title="State Demo c" /> : null}
+            {selectedView === "effect" ? <UseEffectDemo title="Use effect" /> : null}
+            {selectedView === "effectFetch" ? <FetchDemo1 title="Use Fetch" /> : null}
             {/**Add the exercise components you create for each exercise using the key you used for the matching button  */}
           </div>
         </div>
@@ -51,7 +65,28 @@ const Buttons = (props: ButtonProps) => {
         Props demo1
       </button>
       <button className="btn-w100" onClick={() => handleSelected("props2")}>
-        Props demo2
+        List Demo
+      </button>
+      <button className="btn-w100" onClick={() => handleSelected("props3")}>
+        Event Demo
+      </button>
+      <button className="btn-w100" onClick={() => handleSelected("props4")}>
+        Form Demo
+      </button>
+      <button className="btn-w100" onClick={() => handleSelected("state1")}>
+        State Demo a
+      </button>
+      <button className="btn-w100" onClick={() => handleSelected("state2")}>
+        State Demo b
+      </button>
+      <button className="btn-w100" onClick={() => handleSelected("state3")}>
+        State Demo c
+      </button>
+      <button className="btn-w100" onClick={() => handleSelected("effect")}>
+        Use Effect
+      </button>
+      <button className="btn-w100" onClick={() => handleSelected("effectFetch")}>
+        Use fetch
       </button>
     </>
   );
